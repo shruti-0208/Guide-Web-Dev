@@ -58,10 +58,13 @@ header h1 {
 
 /* Navigation Menu */
 .content-nav {
+    /* margin-top: 23px; */
     position: fixed;
-    top: 100px;
+    top: 120px;
     left: 10px;
+    bottom: 55px;
     width: 250px;
+    height: 480px;
     background: linear-gradient(to bottom, #3a0e75, #6200ee);
     color: white;
     padding: 15px;
@@ -229,14 +232,22 @@ footer {
 /* Medium Screens (Tablets) */
 @media screen and (max-width: 768px) {
     
+    /* Navigation menu fixed to the right */
     .content-nav {
         position: fixed;
         top: 120px;
-        left: 0;
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 10px;
-        text-align: center;
+        right: 10px; /* Fixed to the right side */
+        width: 220px; /* Decreased size for tablet */
+        padding: 8px;
+        background: linear-gradient(to bottom, #3a0e75, #6200ee);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        height: 60%; /* Full screen height minus the header */
+        overflow-y: auto; /* Allow scrolling for long navigation */
+    }
+
+    .content-nav h2 {
+        font-size: 1.4rem; /* Slightly smaller heading */
     }
 
     .content-nav ol {
@@ -246,46 +257,119 @@ footer {
     }
 
     .content-nav li {
-        margin: 5px;
+        margin: 4px;
     }
 
     .content-nav a {
-        font-size: 1rem;
+        font-size: 1.1rem; /* Smaller font size */
         padding-left: 5px;
     }
 
+    /* Content section adjusted for the fixed nav */
     .content {
-        margin: 0;
-        width: 100%;
-        padding: 10px;
+        margin-right: 240px; /* Adjusted for nav width */
+        padding: 15px; /* Reduced padding */
+        width: calc(100% - 240px);
     }
 
     .roadmap, .content section {
         flex: 1 1 100%;
     }
+
+    /* Header smaller font */
+    header h1 {
+        font-size: 2.5rem; /* Slightly smaller font */
+    }
 }
 
 /* Small Screens (Mobile Phones) */
 @media screen and (max-width: 480px) {
-    .content-nav {
+    
+    /* Navigation menu fixed at the top */
+    header{
+        padding-top: 1px ;
+        margin: 0 auto;
+        padding-bottom: 1px;
         position: fixed;
-        top: 120px;
+        top: 0;
+        height: 9.6%;
     }
-
-    header h1 {
-        font-size: 2rem;
+    .content-nav {
+        padding: 1px 2px;
+        position: fixed;
+        top: 81px;
+        left: 0;
+        width: 100%;
+        margin-bottom: 20px;
+        /* padding: 10px; */
+        text-align: center;
+        height: 15.4%;
+        overflow-y: 10%;
     }
 
     .content-nav h2 {
-        font-size: 1.2rem;
+        padding: 0;
+        margin: 0;
+        font-size: 1.2rem; /* Smaller header for mobile */
+    }
+    .content-nav ::after{
+       
+        margin: 0 auto;
+    }
+    .content-nav ol {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content-nav li {
+        margin: 4px;
     }
 
     .content-nav a {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Smaller font size */
+        padding-left: 5px;
+    }
+
+    /* Content below the navigation bar */
+    .content {
+        /* margin-top: 120px; Space for fixed navbar */
+        width: 100%;
+        padding: 10px;
+        justify-content: center;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .roadmap-container{
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 152px;
+        width: 100%;
+    }
+
+    /* Adjust header size for mobile */
+    header h1 {
+        font-size: 1.8rem; /* Smaller font size for mobile */
+    }
+
+    .content h2 {
+        font-size: 1.4rem; /* Smaller font size for headings */
+    }
+
+    .content p {
+        font-size: 0.9rem; /* Smaller text for content */
+    }
+
+    .enhanced-link {
+        padding: 10px 20px; /* Smaller padding */
+        font-size: 1rem; /* Smaller font size */
     }
 
     iframe {
-        height: 200px;
+        height: 180px; /* Smaller iframe size */
     }
 
     footer {
