@@ -1,0 +1,294 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to right, lavender, #f4f2f8);
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: lavender;
+}
+
+h1, h2 {
+    color: #3a0e75;
+    font-style: italic;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #d500ff;
+    margin: 10px auto 0 auto;
+    border-radius: 10px;
+}
+
+header {
+    background: linear-gradient(to right, #3a0e75, #6200ee);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 20px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #e6e6e6;
+}
+
+/* Navigation Menu */
+.content-nav {
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    width: 250px;
+    background: linear-gradient(to bottom, #3a0e75, #6200ee);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.content-nav:hover {
+    transform: translateX(-5px);
+}
+
+.content-nav h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #e6e6e6;
+}
+
+.content-nav ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+.content-nav li {
+    margin: 12px 0;
+}
+
+.content-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    padding-left: 10px;
+}
+
+.content-nav a:hover {
+    color: #ffd700;
+    padding-left: 20px;
+}
+
+/* Content and Roadmap Positioning */
+.content {
+    margin-left: 300px; /* Adjusted based on nav width */
+    padding: 20px;
+    width: calc(100% - 320px);
+    background-color: #f4f2f8;
+}
+
+.roadmap ul li {
+    padding-left: 8px;
+    
+
+}
+.roadmap ul {
+    margin-left: 8px;
+}
+.roadmap-container {
+    
+    margin-top: 20px;
+    margin-left: 300px; /* Adjusted based on nav width */
+    padding: 20px;
+    width: calc(100% - 320px);
+}
+
+/* Roadmap and Section Hover Effects */
+.roadmap, .content section {
+    flex: 1 1 calc(50% - 20px);
+    margin-bottom: 20px;
+}
+
+.roadmap-stage {
+    
+    background: linear-gradient(to bottom, #ffffff, #f4f2f8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roadmap-stage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #f4f2f8, #e8e6f5);
+}
+
+/* Section hover effects */
+.content section {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.content section:hover {
+    background: #f9f7ff;
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.enhanced-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background-color: #3a0e75;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.enhanced-link:hover {
+    background-color: #d500ff;
+    transform: translateY(-5px);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #3a0e75;
+}
+
+table th {
+    background-color: #3a0e75;
+    color: white;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+table tr:hover td {
+    background-color: #e8e8e8;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(to right, #3a0e75, #6200ee);
+    color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 768px) {
+    
+    .content-nav {
+        position: fixed;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .content-nav ol {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content-nav li {
+        margin: 5px;
+    }
+
+    .content-nav a {
+        font-size: 1rem;
+        padding-left: 5px;
+    }
+
+    .content {
+        margin: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .roadmap, .content section {
+        flex: 1 1 100%;
+    }
+}
+
+/* Small Screens (Mobile Phones) */
+@media screen and (max-width: 480px) {
+    .content-nav {
+        position: fixed;
+        top: 120px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .content-nav h2 {
+        font-size: 1.2rem;
+    }
+
+    .content-nav a {
+        font-size: 0.9rem;
+    }
+
+    iframe {
+        height: 200px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
