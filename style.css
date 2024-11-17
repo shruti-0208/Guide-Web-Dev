@@ -284,95 +284,115 @@ footer {
 
 /* Small Screens (Mobile Phones) */
 @media screen and (max-width: 480px) {
-    
-    /* Navigation menu fixed at the top */
-    header{
-        padding-top: 1px ;
-        margin: 0 auto;
-        padding-bottom: 1px;
+    /* Header Styling */
+    header {
+        padding: 0;
+        margin: 0;
         position: fixed;
         top: 0;
-        height: 9.6%;
-    }
-    .content-nav {
-        padding: 1px 2px;
-        position: fixed;
-        top: 81px;
-        left: 0;
-        width: 100%;
-        margin-bottom: 20px;
-        /* padding: 10px; */
+        width: 55%;
+        height: 40px; /* Reduced height for compact header */
+        background: linear-gradient(to right, #3a0e75, #6200ee);
         text-align: center;
-        height: 15.4%;
-        overflow-y: 10%;
     }
 
-    .content-nav h2 {
-        padding: 0;
-        margin: 0;
-        font-size: 1.2rem; /* Smaller header for mobile */
+    header h1 {
+        text-align: center;
+        
+        font-size: 1.2rem;
     }
-    .content-nav ::after{
-       
-        margin: 0 auto;
-    }
-    .content-nav ol {
-        padding: 0;
-        margin: 0;
+
+    /* Navigation Bar Styling */
+    .content-nav {
+        position: fixed;
+        top: 40px; /* Below the header */
+        left: 0;
+        width: 55%;
+        height: 55px; /* Reduced height for the nav bar */
+        background: linear-gradient(to bottom, #3a0e75, #6200ee);
+        color: white;
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
+        
+    }
+
+    .content-nav ol {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .content-nav li {
-        margin: 4px;
+        margin: 0;
     }
 
     .content-nav a {
-        font-size: 0.9rem; /* Smaller font size */
-        padding-left: 5px;
+        font-size: 0.9rem; /* Smaller font size for mobile */
+        color: white;
+        text-decoration: none;
     }
 
-    /* Content below the navigation bar */
-    .content {
-        /* margin-top: 120px; Space for fixed navbar */
-        width: 100%;
+    .content-nav a:hover {
+        color: #ffd700;
+    }
+
+    /* Main Content and Roadmap Container */
+    .roadmap-container {
+        margin: 0 auto;
+        margin-top: 97px; /* Adjust for header and nav bar height */
         padding: 10px;
-        justify-content: center;
-        margin-left: 25px;
-        margin-right: 25px;
+        width: 90%; /* Centered and responsive */
+        max-width: 500px; /* Limit maximum width */
     }
 
-    .roadmap-container{
-        margin-left: 25px;
-        margin-right: 25px;
-        margin-top: 152px;
-        width: 100%;
+    .roadmap-container h1 {
+        font-size: 1.5rem; /* Reduced font size for mobile */
+        text-align: center; /* Center align H1 */
+        margin-bottom: 10px;
+        color: #3a0e75;
     }
 
-    /* Adjust header size for mobile */
-    header h1 {
-        font-size: 1.8rem; /* Smaller font size for mobile */
+    .content {
+        margin: 0 auto;
+        margin-top: 120px; /* Adjust for header and nav bar height */
+        padding: 10px;
+        width: 90%; /* Centered and responsive */
+        max-width: 500px; /* Limit maximum width */
     }
 
     .content h2 {
-        font-size: 1.4rem; /* Smaller font size for headings */
+        font-size: 1.2rem; /* Reduced size for headings */
+        text-align: center; /* Center align headings */
     }
 
     .content p {
-        font-size: 0.9rem; /* Smaller text for content */
+        font-size: 0.9rem; /* Reduced size for text */
+        text-align: justify;
     }
 
+    /* Adjust button size for mobile */
     .enhanced-link {
-        padding: 10px 20px; /* Smaller padding */
-        font-size: 1rem; /* Smaller font size */
+        font-size: 0.9rem; /* Reduced size for buttons/links */
+        padding: 8px 16px;
+        display: block;
+        text-align: center; /* Center buttons */
+        margin: 10px auto;
     }
 
-    iframe {
-        height: 180px; /* Smaller iframe size */
-    }
-
+    /* Footer */
     footer {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        padding: 10px;
+        width: 90%; /* Centered footer */
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
     }
 }
+
+
+
